@@ -1,6 +1,5 @@
 import 'package:agenda/pages/cadastro.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 import 'pages/info.dart';
 
@@ -30,7 +29,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Agenda'),
+        title: Text('Pendente'),
         actions: <Widget>[
           IconButton(icon: Icon(Icons.error_outline), onPressed: (){
             Navigator.push(
@@ -52,6 +51,39 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
 
+          ],
+        ),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              child: Center(
+                child: Text('Menu', style: TextStyle(fontSize: 35, color: Colors.white),),
+              ),
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+            ),
+            ListTile(
+              title: Text('Pronto'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('Entrega'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('Finalizado'),
+              onTap: () {
+                Navigator.pop(context);
+              }
+            ),
           ],
         ),
       ),
