@@ -67,19 +67,19 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             ListTile(
-              title: Text('Pronto'),
+              title: Text('Pronto', style: TextStyle(fontSize: 16),),
               onTap: () {
                 Navigator.pop(context);
               },
             ),
             ListTile(
-              title: Text('Entrega'),
+              title: Text('Entrega', style: TextStyle(fontSize: 16),),
               onTap: () {
                 Navigator.pop(context);
               },
             ),
             ListTile(
-              title: Text('Finalizado'),
+              title: Text('Finalizado', style: TextStyle(fontSize: 16),),
               onTap: () {
                 Navigator.pop(context);
               }
