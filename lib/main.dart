@@ -67,19 +67,22 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             ListTile(
-              title: Text('Pronto', style: TextStyle(fontSize: 16),),
+              title: Text('Prontos', style: TextStyle(fontSize: 16),),
+              leading: Icon(Icons.alarm_on),
               onTap: () {
                 Navigator.pop(context);
               },
             ),
             ListTile(
-              title: Text('Entrega', style: TextStyle(fontSize: 16),),
+              title: Text('Entregar', style: TextStyle(fontSize: 16),),
+              leading: Icon(Icons.directions_car),
               onTap: () {
                 Navigator.pop(context);
               },
             ),
             ListTile(
-              title: Text('Finalizado', style: TextStyle(fontSize: 16),),
+              title: Text('Entregado', style: TextStyle(fontSize: 16),),
+              leading: Icon(Icons.weekend),
               onTap: () {
                 Navigator.pop(context);
               }
