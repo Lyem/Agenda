@@ -9,6 +9,7 @@ class info extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text("Desenvolvido por:", style: TextStyle(fontSize: 20),),
               Image.asset('assets/images/ore.png', height: 80, width: 80,),
