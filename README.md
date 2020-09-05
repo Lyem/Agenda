@@ -1,6 +1,6 @@
 # agenda
 
-Agenda usando api do google
+Agenda feita em Flutter
 
 ## Getting Started
 
