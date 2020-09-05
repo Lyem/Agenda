@@ -5,7 +5,7 @@ class cadastro extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Cadastrar"),
+        title: Text("Cadastro"),
       ),
       body: Center(
         child: ListView(
@@ -15,7 +15,7 @@ class cadastro extends StatelessWidget {
                 decoration: InputDecoration(
                   icon: Icon(Icons.cake),
                   border: InputBorder.none,
-                  labelText: "Nome do Produto",
+                  labelText: "Produto",
                 ),
               ),
               TextFormField(
@@ -66,6 +66,12 @@ class cadastro extends StatelessWidget {
                   border: InputBorder.none,
                   labelText: "Obeservações",
                 ),
+              ),
+              const SizedBox(height: 85),
+              RaisedButton(
+                onPressed: (){},
+                color: Colors.blue,
+                child: const Text('Cadastrar', style: TextStyle(fontSize: 35,color: Colors.white)),
               ),
             ]
         ),
