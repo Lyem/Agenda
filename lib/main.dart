@@ -1,7 +1,6 @@
-import 'package:agenda/pages/cadastro.dart';
 import 'package:flutter/material.dart';
-
 import 'pages/info.dart';
+import 'pages/cadastro.dart';
 
 void main() {runApp(MyApp());}
 
@@ -25,11 +24,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  String NamePage = "Pendentes";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Pendente'),
+        title: Text(NamePage),
         actions: <Widget>[
           IconButton(icon: Icon(Icons.error_outline), onPressed: (){
             Navigator.push(
@@ -67,24 +69,47 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             ListTile(
-              title: Text('Prontos', style: TextStyle(fontSize: 16),),
-              leading: Icon(Icons.alarm_on),
+              title: Text('Pendentes', style: TextStyle(fontSize: 16),),
+              leading: Icon(Icons.alarm),
               onTap: () {
+                NamePage = "Pendentes";
                 Navigator.pop(context);
+                setState(() {
+                  MyApp;
+                });
+              },
+            ),
+            ListTile(
+              title: Text('Prontos', style: TextStyle(fontSize: 16),),
+              leading: Icon(Icons.assistant_photo),
+              onTap: () {
+                NamePage = "Prontos";
+                Navigator.pop(context);
+                setState(() {
+                  MyApp;
+                });
               },
             ),
             ListTile(
               title: Text('Entregar', style: TextStyle(fontSize: 16),),
               leading: Icon(Icons.directions_car),
               onTap: () {
+                NamePage = "Entregar";
                 Navigator.pop(context);
+                setState(() {
+                  MyApp;
+                });
               },
             ),
             ListTile(
               title: Text('Entregado', style: TextStyle(fontSize: 16),),
               leading: Icon(Icons.weekend),
               onTap: () {
+                NamePage = "Entregado";
                 Navigator.pop(context);
+                setState(() {
+                  MyApp;
+                });
               }
             ),
           ],
